@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExampleComponent } from '../index'
+import { ExampleComponent } from '../src/index'
 
 export default {
   title: 'Example Component',

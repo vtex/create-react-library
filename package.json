@@ -58,6 +58,5 @@
       "index.test.js",
       "lib/**/*.test.js"
     ]
-  },
-  "sideEffects": false
+  }
 }
