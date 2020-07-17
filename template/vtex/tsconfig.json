@@ -6,7 +6,9 @@
     "types": ["node", "jest", "graphql"],
     "module": "esnext",
     "moduleResolution": "node",
-    "target": "es2017"
+    "target": "es2017",
+    "rootDirs": ["src", "stories"],
+    "baseUrl": "src",
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "example"]
