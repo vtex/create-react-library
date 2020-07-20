@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save {{name}}
+yarn add {{name}}
 ```
 
 ## Usage
@@ -16,7 +16,6 @@ npm install --save {{name}}
 import React, { Component } from 'react'
 
 import MyComponent from '{{name}}'
-import '{{name}}/dist/index.css'
 
 class Example extends Component {
   render() {
