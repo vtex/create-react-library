@@ -4,5 +4,5 @@
     "rootDirs": ["src", "stories"],
     "baseUrl": "src",
   },
-  "include": ["src", "stories"],
+  "exclude": ["node_modules", "dist", "stories"]
 }
