@@ -6,7 +6,7 @@
   "license": "{{license}}",
   "repository": "{{repo}}",
   "main": "dist/index.js",
-  "module": "dist/{{name}}.esm.js",
+  "module": "dist/{{shortName}}.esm.js",
   "typings": "dist/index.d.ts",
   "engines": {
     "node": ">=10"
