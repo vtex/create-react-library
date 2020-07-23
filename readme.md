@@ -77,14 +77,14 @@ First, run rollup to watch your `src/` module and automatically recompile it int
 yarn start # runs TSDX with watch flag
 ```
 
-The second part will be running the `example/` create-react-app that's linked to the local version of your module.
+The second part will be running the `stories/` of Storybook that's linked to the local version of your module.
 
 ```bash
 # (in another tab)
 yarn storybook # runs Storybook server
 ```
 
-Now, anytime you make a change to your library in `src/` or to the example storybook documentation `./stories`, `Storybook` will live-reload your local dev server so you can iterate on your component in real-time.
+Now, anytime you make a change to your library in `src/` or to the example storybook documentation `stories/`, `Storybook` will live-reload your local dev server so you can iterate on your component in real-time.
 
 #### Publishing to npm
 
