@@ -1,12 +1,12 @@
-# create-react-library
+# @vtex/create-react-library
 
-> CLI for creating reusable, modern React libraries using Rollup and create-react-app.
+> CLI for creating reusable, modern React libraries to work with VTEX IO platform using Rollup, TSDX, Storybook.
 
-[![NPM](https://img.shields.io/npm/v/create-react-library.svg)](https://www.npmjs.com/package/create-react-library) [![Build Status](https://travis-ci.com/transitive-bullshit/create-react-library.svg?branch=master)](https://travis-ci.com/transitive-bullshit/create-react-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+<!-- [![NPM](https://img.shields.io/npm/v/create-react-library.svg)](https://www.npmjs.com/package/create-react-library) [![Build Status](https://travis-ci.com/transitive-bullshit/create-react-library.svg?branch=master)](https://travis-ci.com/transitive-bullshit/create-react-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) -->
 
----
+<!-- --- -->
 
-<div align="center">
+<!-- <div align="center">
 	<a href="https://saasify.sh" title="Saasify">
 		<div>
       <img src="https://docs.saasify.sh/_media/logo.png" alt="Saasify Logo" width="200" />
@@ -14,45 +14,50 @@
     <sup>This project is sponsored by Saasify.</sup><br />
 		<sup><b>The easiest way to monetize your APIs</b></sup>
 	</a>
-</div>
+</div> -->
 
 ---
 
 ## Intro
 
+In VTEX IO we believe that the development and integration of custom components to our platform should be **seamless**, **naturally documented** and that the component's **performance tradeoffs should be as clear as possible**.
+
+In order to accomplish that, we leveraged our knowledge with the existing community tools. We forked the <a>Create-React-Library</a> project, which is a CLI for initializaing pre-configured projects, to integrate it with our plataforms and adapt to our developers' needs. This way we strive to make the developing experience local, simple and easy to integrate. 
+
+Besides that, in our vtex template we utilize <a>TSDX</a> to easily catch bugs, build and test. Also, <a>Storybook</a> is used as a tool to visualize and document.
+
+In the future, we intend to implement metrics and heuristics to assess the possible performance tradeoffs of the built components.   
+
 <p align="center">
-  <img width="600" src="https://cdn.rawgit.com/transitive-bullshit/create-react-library/master/media/demo.svg">
+  <img width="600" src="https://cdn.rawgit.com/vtex/create-react-library/readme/media/demo.png">
 </p>
 
 ## Features
 
 - Easy-to-use CLI
 - Handles all modern JS features
-- Bundles `commonjs` and `es` module formats
-- [create-react-app](https://github.com/facebookincubator/create-react-app) for example usage and local dev
-- [Rollup](https://rollupjs.org/) for bundling
+- Seamless integration with VTEX IO
+- [Storybook](https://github.com/facebookincubator/create-react-app) for example usage and local dev
+- [TSDX](https://rollupjs.org/) for bundling
 - [Babel](https://babeljs.io/) for transpiling
-- [Jest](https://facebook.github.io/jest/) for testing
 - Supports complicated peer-dependencies
 - Supports CSS modules
-- Optional support for TypeScript
+- Support for TypeScript
 - Sourcemap creation
-- Thousands of public modules created
-- Thorough documentation :heart_eyes:
-- [Chinese docs](./readme.zh-CN.md) by [@monsterooo](https://github.com/monsterooo)
+- Treeshaking
 
 ## Install globally
 
 This package requires `node >= 10`.
 
 ```bash
-npm install -g create-react-library
+npm install -g @vtex/create-react-library
 ```
 
 ## Usage with npx
 
 ```bash
-npx create-react-library
+npx @vtex/create-react-library
 ```
 
 _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
@@ -73,7 +78,7 @@ Answer some basic prompts about your module, and then the CLI will perform the f
 At this point, your new module should resemble this screenshot and is all setup for local development.
 
 <p align="center">
-  <img width="600" src="https://cdn.rawgit.com/transitive-bullshit/create-react-library/master/media/tree.svg">
+  <img width="600" src="https://cdn.rawgit.com/vtex/create-react-library/readme/media/tree.png">
 </p>
 
 ## Development
@@ -83,20 +88,17 @@ Local development is broken into two parts (ideally using two tabs).
 First, run rollup to watch your `src/` module and automatically recompile it into `dist/` whenever you make changes.
 
 ```bash
-npm start # runs rollup with watch flag
+yarn start # runs TSDX with watch flag
 ```
 
 The second part will be running the `example/` create-react-app that's linked to the local version of your module.
 
 ```bash
 # (in another tab)
-cd example
-npm start # runs create-react-app dev server
+yarn storybook # runs Storybook server
 ```
 
-Now, anytime you make a change to your library in `src/` or to the example app's `example/src`, `create-react-app` will live-reload your local dev server so you can iterate on your component in real-time.
-
-![](https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif)
+Now, anytime you make a change to your library in `src/` or to the example storybook documentation `./stories`, `Storybook` will live-reload your local dev server so you can iterate on your component in real-time.
 
 #### Publishing to npm
 
