@@ -1,6 +1,6 @@
 # @vtex/create-react-library
 
-> CLI for creating reusable, modern React libraries to work with VTEX IO platform using Rollup, TSDX, Storybook.
+> CLI for creating reusable, modern React libraries to work with VTEX IO platform using Create-React-Library, TSDX, Storybook.
 
 ---
 
