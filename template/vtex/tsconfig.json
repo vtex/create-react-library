@@ -1,8 +1,4 @@
 {
   "extends": "@vtex/tsconfig",
-  "compilerOptions": {
-    "rootDirs": ["src", "stories"],
-    "baseUrl": "src",
-  },
-  "exclude": ["node_modules", "dist", "stories"]
+  "exclude": ["node_modules", "dist"]
 }
