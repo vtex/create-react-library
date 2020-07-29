@@ -1,3 +1,9 @@
-import { Example } from './components/Example'
+import * as React from 'react'
 
-export { Example }
+interface Props {
+  text: string
+}
+
+export const Example = ({ text }: Props) => {
+  return <div>Example Component: {text}</div>
+}

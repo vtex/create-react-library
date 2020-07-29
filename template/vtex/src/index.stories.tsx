@@ -1,14 +1,11 @@
 import React from 'react';
-import { linkTo } from '@storybook/addon-links';
-import { Welcome } from '@storybook/react/demo';
+import { Example } from '.'
 
 export default {
-  title: 'Welcome',
-  component: Welcome,
+  title: 'Example',
+  component: Example,
 };
 
-export const ToStorybook = () => <Welcome showApp={linkTo('Button')} />;
+export const Text = () => <Example text="Storybooks Text Example"/>
 
-ToStorybook.story = {
-  name: 'to Storybook',
-};
+export const Emoji = () => <Example text="😀 😎 👍 💯"/>
