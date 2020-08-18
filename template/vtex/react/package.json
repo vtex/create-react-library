@@ -1,0 +1,1 @@
+{"sideEffects":false,"peerDependencies":{"react":"^16.0.0"},"devDependencies":{"@types/react":"^16.9.27","@types/react-dom":"^16.9.7","@vtex/prettier-config":"^0.3.1","@vtex/tsconfig":"^0.5.0","eslint-config-vtex-react":"^6.7.0","prettier":"^2.0.5","react":"^16.13.1","react-dom":"^16.13.1","react-scripts":"^3.4.1","ts-loader":"^8.0.1"},"scripts":{"test":"vtex-test-tools test"}}
