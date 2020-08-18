@@ -1,9 +1,11 @@
 import * as React from 'react'
 
-interface Props {
+interface ExampleProps {
   text: string
 }
 
-export const Example = ({ text }: Props) => {
+const Example: React.FunctionComponent<ExampleProps> = ({ text }: ExampleProps) => {
   return <div>Example Component: {text}</div>
 }
+
+export { Example, ExampleProps }
