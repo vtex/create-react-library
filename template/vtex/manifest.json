@@ -1,9 +1,9 @@
 {
   "vendor": "CHANGE_ME",
-  "name": "CHANGE_ME",
+  "name": "{{name}}",
   "version": "0.0.1",
   "title": "CHANGE_ME",
-  "description": "CHANGE_ME",
+  "description": "{{description}}",
   "vtexComponentsEnabled": true,
   "defaultLocale": "pt-BR",
   "builders": {
