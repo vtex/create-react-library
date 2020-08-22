@@ -6,16 +6,12 @@
 
 ## Intro
 
-In VTEX IO we believe that the development and integration of custom components to our platform should be **seamless**, **naturally documented** and that the component's **performance tradeoffs should be as clear as possible**.
+In VTEX IO we believe that the development and integration of custom components to our platforms should be **simple**, **seamless** and **naturally documented**. This is a CLI which helps you to start your React components and to have the best developing experience. Run them on VTEX IO stores or anywhere you want.
 
-In order to accomplish that, we leveraged our knowledge with the existing community tools. We forked the [Create-React-Library](https://github.com/transitive-bullshit/create-react-library) project, which is a CLI for initializaing pre-configured projects, to integrate it with our plataforms and adapt to our developers' needs. This way we strive to make the developing experience local, simple and easy to integrate. 
-
-Besides that, in our vtex template we utilize [TSDX](https://github.com/formium/tsdx) to easily catch bugs, build and test. Also, [Storybook](https://storybook.js.org/) is used as a tool to visualize and document.
-
-In the future, we intend to implement metrics and heuristics to assess the possible performance tradeoffs of the built components.   
+The template provided allows you to develop your component in a familiar environment with community tools and still be able to link it to your VTEX IO store. Besides that, in our vtex template we utilize [TSDX](https://github.com/formium/tsdx) to easily catch bugs, build and test. Also, [Storybook](https://storybook.js.org/) is used as a tool for visualization and documentation.
 
 <p align="center">
-  <img width="600" src="https://raw.githubusercontent.com/vtex/create-react-library/readme/media/demo.png">
+  <img width="500" src="https://raw.githubusercontent.com/vtex/create-react-library/master/media/demo.png">
 </p>
 
 ## Features
@@ -64,7 +60,7 @@ Answer some basic prompts about your module, and then the CLI will perform the f
 At this point, your new module should resemble this screenshot and is all setup for local development.
 
 <p align="center">
-  <img width="600" src="https://github.com/vtex/create-react-library/blob/readme/media/tree.png?raw=true">
+  <img width="300" src="https://raw.githubusercontent.com/vtex/create-react-library/master/media/tree.png">
 </p>
 
 ## Development
@@ -84,9 +80,15 @@ The second part will be running the `stories/` of Storybook that's linked to the
 yarn storybook # runs Storybook server
 ```
 
-Now, anytime you make a change to your library in `src/` or to the example storybook documentation `stories/`, `Storybook` will live-reload your local dev server so you can iterate on your component in real-time.
+Now, anytime you make a change to your library in `src/` or to the example storybook documentation `stories/`, `Storybook` will live-reload your local dev server so you can iterate on your component in real-time in an isolated environment.
 
-#### Publishing to npm
+Link your component to your VTEX IO store using [VTEX Toolbelt](https://github.com/vtex/toolbelt#vtex-toolbelt) `REMEMBER TO INDICATE THE RIGHT VERSION`.
+
+```bash
+vtex link # runs VTEX Toolbelt
+```
+
+Or publish in NPM and use it anywhere.
 
 ```bash
 npm publish
@@ -96,6 +98,9 @@ This builds `commonjs` and `es` versions of your module to `dist/` and then publ
 
 Make sure that any npm modules you want as peer dependencies are properly marked as `peerDependencies` in `package.json`. The rollup config will automatically recognize them as peers and not try to bundle them in your module.
 
+### Integration with VTEX IO
+Inside the project all the IO tools for development are still available. There is a `./react` folder with an `Adapter.tsx` component which connects your `src/index.tsx` to the store. There you can make the changes specific to the [VTEX Pages Admin](https://vtex.io/docs/app/vtex.admin-pages@4.26.0/) schema, for instance, as you would in any VTEX IO app. Similarly, with the `./store/interfaces.json` you can edit the interface of your component to the store.
+
 ## License
 
-MIT © [Travis Fischer](https://github.com/transitive-bullshit)
+MIT ©
