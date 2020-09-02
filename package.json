@@ -9,6 +9,11 @@
   "engines": {
     "node": ">=10"
   },
+  "files": [
+    "/template",
+    "/lib",
+    "index.js"
+  ],
   "bin": {
     "create-react-library": "index.js"
   },

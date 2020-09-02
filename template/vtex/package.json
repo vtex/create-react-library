@@ -11,10 +11,6 @@
   "engines": {
     "node": ">=10"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
